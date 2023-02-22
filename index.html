@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>nav bar</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  var slideIndex = 0;
+  var slides = $(".slider img");
+  var slideCount = slides.length;
+  
+  function showSlide() {
+    // Hide all slides
+    slides.removeClass("active");
+    // Show the current slide
+    slides.eq(slideIndex).addClass("active");
+    // Move to the next slide
+    slideIndex++;
+    if (slideIndex >= slideCount) {
+      slideIndex = 0;
+    }
+  }
+  
+  // Call showSlide every 5 seconds
+  setInterval(showSlide, 5000);
+});
+</script>
+
+ </head>
+ <body>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">GREEN PALACE MOTEL</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/">Home</a></li>
+         <li><a href="/">About</a></li>
+         <li class="services">
+           <a href="/">Services</a>
+           <!-- DROPDOWN MENU -->
+           <ul class="dropdown">
+             <li><a href="/">Bar </a></li>
+             <li><a href="/">Restaurant</a></li>
+             <li><a href="/">Accommodation</a></li>
+             <li><a href="/">Gardens</a></li>
+             <li><a href="/">Meetings</a></li>
+           </ul>
+         </li>
+         <li><a href="/">Pricing</a></li>
+         <li><a href="/">Contact</a></li>
+       </div>
+     </ul>
+   </nav>
+   <div class="slider">
+    <!-- <input type="range" min="0" max="100" value="50" class="slider">
+    <label for="slider">Slider:</label>
+<input type="range" min="0" max="100" value="50" class="slider" id="slider"> -->
+
+      <div class="img-container">
+        <img src="img1.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img2.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img3.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img4.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img5.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img6.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img7.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img8.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img9.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img10.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img11.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img12.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img13.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img14.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img15.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img16.jpg">
+      </div>
+      <div class="img-container">
+        <img src="img17.jpg">
+      </div>
+       
+    </div>
+   </div>
+ </body>
+</html>
